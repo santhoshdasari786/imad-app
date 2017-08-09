@@ -23,7 +23,7 @@ var articleslist = {
      content : "helloe" 
 },
 
-}
+};
 
 function createTemplate (data) {
 
