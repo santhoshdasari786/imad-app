@@ -78,6 +78,14 @@ var htmltamplate = `
  
  return htmltamplate;
 }
+var counter = 0;
+var button = document.getElementById("counter");
+var span = document.getElementById("count");
+span.innerHTML = counter.toString();
+button.onclick = function(){
+    counter = counter+1;
+}
+
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
