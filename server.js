@@ -49,9 +49,9 @@ var htmltamplate = `
     </div>
     
     <div>
-        <tittle>
+        <title>
             hello
-        </tittle>
+        </title>
     </div>
     
       <h3> header three</h3>
