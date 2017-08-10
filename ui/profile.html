@@ -1,24 +1,49 @@
-console.log('Loaded!');
+<html>
+    <head>
+        <title>
+            Profile
+        </title>
+        <link href="/ui/style.css" rel = "stylesheet" />
+    </head>
+    
+    <body>
+     <div class ="profilecontainer">
+        <div class = "center">
+        <img id = "profileimg" 
+        src="https://firebasestorage.googleapis.com/v0/b/annauniv-3f9dc.appspot.com/o/newsFeed%2FFeed.jpg?alt=media&amp;token=6d7f9b4d-b784-40e-a6-5901a706bdbb" 
+        class = "img-medium"/>
+        </div>
+        <h3>
+            Personel
+        </h3>
+        <div>
+            Hi. My name is Santhosh
+        </div>
+        <hr/>
+        <h3>
+            Professional
+        </h3>
+        <div>
+            I am Working as Android Developer
+        </div>
+        <hr/>
+        <div class = "footer">
+            This button <button id="counter">Click me</button> has been clicked <span id = "count">0</span> times.
+        </div>
+        <div id ="main-text" class = "center-text-big bold">
+            Hi! i am santhosh, and this is my first webapp.
+            <h4>
+                Android
+            </h4>
+            i am learning web development
+        </div>
+    </div>
+    <script>
+        alert('Hi, Keep on Learning');
+    </script>
+    <script type="text/javascript" src="/ui/main.js">
+        
+    </script>
 
-var counter = 0;
-var button = document.getElementById("counter");
-
-button.onclick = function(){
-    
-    var request = new XMLHttpRequest();
-    
-    request.onreadystatechange = function(){
-        if(request.readyState == XMLHttpReuest.DONE)
-        {
-             if(request.status == 200){
-             var counter = request.responseText;
-    var span = document.getElementById("count");
-span.innerHTML = counter.toString();         
-             }
-        }
-    };
-    
-    
-    
-    
-}
+    </body>
+</html>
