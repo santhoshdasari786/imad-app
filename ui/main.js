@@ -8,7 +8,7 @@ button.onclick = function () {
     var request = new XMLHttpRequest();
     
     request.onreadystatechange = function() {
-        if(request.readyState === XMLHttpReuest.DONE)
+        if(request.readyState == XMLHttpReuest.DONE)
         {
              if(request.status == 200)
              {
