@@ -61,7 +61,7 @@ submit.onclick = function ()
         }
     };
     // make request 
-    request.open('GET','http://santhoshdasari786.imad.hasura-app.io/submit-name?name=' + name ,true);
+    request.open('GET','http://santhoshdasari786.imad.hasura-app.io/submit-name?name='+name ,true);
     request.send(null);
 };
 
