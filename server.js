@@ -149,6 +149,31 @@ app.get('/ui/madi.png', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'madi.png'));
 });
 
+app.get('/articles/:articlewo', function (req, res) {
+    var articlewo = req.params.articlewo;
+    
+   // var articleData = 
+    pool.query("SELECT * FROM article WHERE title ="+req.params.articlewo, function (err, result){
+       if(err)
+       {
+           res.status(500).send(err.toString());
+       }
+       else
+       {
+           if(result.rows.lemgth === 0)
+           {
+               res.status(404).send('ARTICLE NOT FOUND');
+           }
+           else
+           {
+               var ari = result.rows[0];
+               res.send(createTemplate(ari));
+           }
+       }
+    });
+ 
+});
+
 app.get('/:articlewo', function (req, res) {
     var articlewo = req.params.articlewo;
   res.send(createTemplate(articleslist[articlewo]));
