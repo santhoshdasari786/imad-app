@@ -216,6 +216,34 @@ app.post('/create-user',function(req,res)
    });
 });
 
+app.post('/login', function(req,res){
+    
+    var username = req.body.username;
+    var password = req.body.password;
+  
+   pool.query('SELECT * from "users" username = $1 ',[username], function(err, result)
+   {
+        if(err)
+       {
+           res.status(500).send(err.toString());
+       }
+       else
+       { 
+            if(result.rows.lemgth === 0)
+           {
+               res.status(403).send('USERNAME OR PASSWORD IS INVALID');
+           }
+           else {
+              // var dbString 
+           }
+           
+           res.send('USER SUCCESSFULLY CREATED '+username);
+           
+       }
+   });
+   
+});
+
 app.get('/:articlewo', function (req, res) {
     var articlewo = req.params.articlewo;
   res.send(createTemplate(articleslist[articlewo]));
