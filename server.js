@@ -175,7 +175,7 @@ app.get('/articles/:articlewo', function (req, res) {
            else
            {
                var ari = result.rows[0];
-               res.send(createTemplate(ari));
+               res.send(JSON.stringify(ari));
            }
        }
     });
