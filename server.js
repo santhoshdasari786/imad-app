@@ -19,16 +19,19 @@ var articleslist = {
  'articleones' : {
      title : "santhosh",
      heading : "date",
+     date : 'aug-15',
      content : "helloe" 
 },
 'articletwos' : {
      title : "naveen",
      heading : "date",
+     date : 'aug-15',
      content : "helloe" 
 },
 'articlethrees' : {
      title : "hello",
      heading : "date",
+     date : 'aug-15',
      content : "helloe" 
 },
 
@@ -36,8 +39,10 @@ var articleslist = {
 
 function createTemplate (data) {
 
+
 var title = data.title;
 var heading = data.heading;
+var date = data.date;
 var content = data.content;
 
 
@@ -75,6 +80,9 @@ var htmltamplate = `
         <title>
             hello
         </title>
+         <p>
+            ${date}
+        </p>
     </div>
     
       <h3> header three</h3>
