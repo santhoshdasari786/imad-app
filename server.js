@@ -161,7 +161,7 @@ app.get('/articles/:articlewo', function (req, res) {
     var articlewo = req.params.articlewo;
     
    // var articleData = 
-    pool.query("SELECT * FROM articles WHERE title ='"+req.params.articlewo +"'", function (err, result){
+    pool.query("SELECT * FROM articles WHERE title = $1", [req.params.articlewo], function (err, result){
        if(err)
        {
            res.status(500).send(err.toString());
