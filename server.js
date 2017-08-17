@@ -236,7 +236,7 @@ app.post('/login', function(req,res){
                res.status(403).send('USERNAME OR PASSWORD IS INVALID');
            }
            else {
-               var dbString  = res.rows[0].password;
+               var dbString  = result.rows[0].password;
                var salt = dbString.split('$$$$$$$$')[2];
                var hashPassword  = hash(password,salt );
                if(hashPassword === dbString)
