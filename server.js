@@ -253,6 +253,10 @@ app.post('/login', function(req,res){
    
 });
 
+app.get('/signin', function (req, res) {
+  res.sendFile(path.join(__dirname, 'ui', 'loginform.html'));
+});
+
 /*app.get('/:articlewo', function (req, res) {
     var articlewo = req.params.articlewo;
   res.send(createTemplate(articleslist[articlewo]));
