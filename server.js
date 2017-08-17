@@ -253,10 +253,10 @@ app.post('/login', function(req,res){
    
 });
 
-app.get('/:articlewo', function (req, res) {
+/*app.get('/:articlewo', function (req, res) {
     var articlewo = req.params.articlewo;
   res.send(createTemplate(articleslist[articlewo]));
-});
+});*/
 
 
 // Do not change port, otherwise your app won't run on IMAD servers
