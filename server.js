@@ -193,6 +193,8 @@ function hash (input,salt )
 app.get('/hash/:input', function(req, res)
 {
     var hashedString = hash(req.params.input,'this-is-some-random-string');
+    
+    
     res.send(hashedString);
 });
 
@@ -221,7 +223,7 @@ app.post('/login', function(req,res){
     var username = req.body.username;
     var password = req.body.password;
   
-   pool.query('SELECT * from "users" username = $1 ',[username], function(err, result)
+   pool.query('SELECT * FROM "users" WHERE username = $1 ',[username], function(err, result)
    {
         if(err)
        {
@@ -234,10 +236,17 @@ app.post('/login', function(req,res){
                res.status(403).send('USERNAME OR PASSWORD IS INVALID');
            }
            else {
-              // var dbString 
+               var dbString  = res.rows[0].password;
+               var salt = dbString.split('$$$$$$$$')[2];
+               var hashPassword  = hash(password,salt );
+               if(hashPassword === dbString)
+               {
+                   res.send('Credentials Correct '); 
+               }
+               else{
+                   res.send(403).send('username/password is invalid');
+               }
            }
-           
-           res.send('USER SUCCESSFULLY CREATED '+username);
            
        }
    });
