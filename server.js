@@ -10,7 +10,8 @@ var bodyParser = require('body-parser');
 //require('request');
 // {request} from 'request';
 //require('graphql');
-
+var graphqlHTTP = require('express-graphql');
+var { buildSchema } = require('graphql');
 
 
 /*import {
