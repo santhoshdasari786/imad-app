@@ -11,7 +11,7 @@ var bodyParser = require('body-parser');
 // {request} from 'request';
 //require('graphql');
 var graphqlHTTP = require('express-graphql');
-var { buildSchema } = require('graphql');
+var  buildSchema  = require('graphql');
 
 
 /*import {
