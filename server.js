@@ -6,8 +6,8 @@ var crypto = require('crypto');
 var bodyParser = require('body-parser');
 
 
-require('babel');
-require('request');
+//require('babel');
+//require('request');
 // {request} from 'request';
 
 require('graphql');
