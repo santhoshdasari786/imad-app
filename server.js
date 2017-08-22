@@ -9,8 +9,9 @@ var bodyParser = require('body-parser');
 //require('babel');
 //require('request');
 // {request} from 'request';
+//require('graphql');
 
-require('graphql');
+
 
 /*import {
   graphql,
