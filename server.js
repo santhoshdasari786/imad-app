@@ -6,8 +6,8 @@ var crypto = require('crypto');
 var bodyParser = require('body-parser');
 
 
-var graphqlHTTP = require('express-graphql');
-var buildSchema = require('graphql');
+//var graphqlHTTP = require('express-graphql');
+//var buildSchema = require('graphql');
 
 
 var schema = buildSchema(`
