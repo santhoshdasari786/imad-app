@@ -5,7 +5,7 @@ var Pool = require('pg').Pool;
 var crypto = require('crypto');
 var bodyParser = require('body-parser');
 require('babel/register');
-
+import {request} from 'request';
 
 import {
   graphql,
