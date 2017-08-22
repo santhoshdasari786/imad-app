@@ -4,15 +4,20 @@ var path = require('path');
 var Pool = require('pg').Pool;
 var crypto = require('crypto');
 var bodyParser = require('body-parser');
-require('babel/register');
-import {request} from 'request';
 
-import {
+
+require('babel/register');
+require('request');
+// {request} from 'request';
+
+require('graphql');
+
+/*import {
   graphql,
   GraphQLSchema,
   GraphQLObjectType,
   GraphQLString
-} from 'graphql';
+} from 'graphql';*/
 
 var schema = new GraphQLSchema({
   query: new GraphQLObjectType({
