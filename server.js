@@ -5,7 +5,6 @@ var Pool = require('pg').Pool;
 var crypto = require('crypto');
 var bodyParser = require('body-parser');
 require('babel/register');
-require('./server.js');
 
 
 import {
