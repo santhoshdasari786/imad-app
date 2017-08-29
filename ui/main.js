@@ -65,6 +65,16 @@ submit.onclick = function ()
     request.send(null);
 };
 
+var signin = document.getElementById('sbt_bttn');
 
+
+
+signin.onclick = function() 
+{
+    var username = document.getElementById('username');
+    var password = document.getElementById('password');
+    
+    
+}
 
 
