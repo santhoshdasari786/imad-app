@@ -6,6 +6,8 @@ var crypto = require('crypto');
 var bodyParser = require('body-parser');
 
 
+var   buildSchema   = require('graphql').buildSchema;
+
 //var graphqlHTTP = require('express-graphql');
 //var { buildSchema } = require('graphql');
 
@@ -30,7 +32,7 @@ app.use(morgan('combined'));
 app.use(bodyParser.json()); 
 
 // graphql
-var   buildSchema   = require('graphql').buildSchema;
+//var   buildSchema   = require('graphql').buildSchema;
 
 // Construct a schema, using GraphQL schema language
 var schema = buildSchema(`
