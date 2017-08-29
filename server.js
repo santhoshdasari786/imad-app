@@ -10,11 +10,11 @@ var bodyParser = require('body-parser');
 //var { buildSchema } = require('graphql');
 
 
-var schema = buildSchema(`
+/*var schema = buildSchema(`
   type Query {
     hello: String
   }
-`);
+`);*/
 
 
 var config = {
