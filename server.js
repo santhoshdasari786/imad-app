@@ -29,6 +29,35 @@ var app = express();
 app.use(morgan('combined'));
 app.use(bodyParser.json()); 
 
+// graphql
+var   buildSchema   = require('graphql').buildSchema;
+
+// Construct a schema, using GraphQL schema language
+var schema = buildSchema(`
+  type Query {
+    hello: String
+  }
+`);
+
+// The root provides a resolver function for each API endpoint
+var root = {
+  hello: () => {
+    return 'Hello world!';
+  },
+};
+
+
+app.use('/graphql', graphqlHTTP({
+  schema: schema,
+  rootValue: root,
+  graphiql: true,
+}));
+
+
+
+// graphql
+
+
 var articleslist = {
  'articleones' : {
      title : "santhosh",
