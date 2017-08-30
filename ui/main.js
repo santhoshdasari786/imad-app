@@ -71,10 +71,36 @@ var signin = document.getElementById('sbt_bttn');
 
 signin.onclick = function() 
 {
-    var username = document.getElementById('username');
-    var password = document.getElementById('password');
+    var username = document.getElementById('username').value;
+    var password = document.getElementById('password').value;
+    console.log(username);
+    
+    var request = new XMLHttpRequest();
+    
+    request.onreadystatechange = function () {
+        if(request.readyState === XMLHttpRequest.DONE)
+        {
+            if(request.status === 200)
+            {
+                console.log('user is logged in');
+                alert('Logged in successfully');
+            }
+            else if(request.status === 403)
+            {
+                   alert('username/password invalid');
+            }
+            else if(request.status === 500)
+            {
+                   alert('Loggedsomething went wrong');
+            }
+        }
+    };
     
     
-}
+    request.open('GET','http://santhoshdasari786.imad.hasura-app.io/login' ,true);
+    request.setRequestHeader('Content-Type','application/json');
+    request.send(JSON.stringify({username: username, password: password}));
+    
+};
 
 
