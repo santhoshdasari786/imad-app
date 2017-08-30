@@ -1,7 +1,7 @@
 console.log('Loaded!');
 
 //var counter = 0;
-var button = document.getElementById('counter');
+//var button = document.getElementById('counter');
 
 /*button.onclick = function () {
     
@@ -26,12 +26,13 @@ var button = document.getElementById('counter');
     request.open('GET','http://santhoshdasari786.imad.hasura-app.io/counter',true);
     request.send(null);
     
-    /*counter = counter+1;
+   // counter = counter+1;
     
-    var span = document.getElementById("count");
-    span.innerHTML = counter.toString();*/
-};*/
-
+    //var span = document.getElementById("count");
+    //span.innerHTML = counter.toString();
+    //console.log('Loaded!');
+};
+*/
 // submit
 var nameInput = document.getElementById('name');
 var names = nameInput.value;
