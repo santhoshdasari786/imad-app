@@ -289,7 +289,7 @@ app.post('/login', function(req,res){
                if(hashPassword === dbString)
                {
                    // set session 
-                   req.session.auth = {userId: results.rows[0].id};
+                   req.session.auth = {userId: result.rows[0].id};
                    res.send('Credentials Correct '); 
                }
                else{
