@@ -99,7 +99,7 @@ signin.onclick = function()
     };
     
     
-    request.open('GET','http://santhoshdasari786.imad.hasura-app.io/login' ,true);
+    request.open('POST','http://santhoshdasari786.imad.hasura-app.io/login' ,true);
     request.setRequestHeader('Content-Type','application/json');
     request.send(JSON.stringify({username: username, password: password}));
     
