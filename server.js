@@ -289,7 +289,7 @@ app.post('/login', function(req,res){
                if(hashPassword === dbString)
                {
                    // set session 
-                   req.session.auth === { userId: results.rows[0].id};
+                   req.session.auth = {userId: results.rows[0].id};
                    res.send('Credentials Correct '); 
                }
                else{
@@ -303,12 +303,9 @@ app.post('/login', function(req,res){
 });
 
 app.get('/checklogin', function (req, res) {
-   if ( req.session && req.session.auth && req.session.auth.userId)
-   {
+   if (req.session && req.session.auth && req.session.auth.userId){
        res.send('you are logged in : ' + req.session.auth.userId.toString());
-   }
-   else
-   {
+   } else {
        res.send('you are not logged in');
    }
 });
