@@ -34,7 +34,7 @@ console.log('Loaded!');
 };
 */
 // submit
-var nameInput = document.getElementById('name');
+/*var nameInput = document.getElementById('name');
 var names = nameInput.value;
 var submit = document.getElementById('submit_btn');
 
@@ -64,7 +64,7 @@ submit.onclick = function ()
     // make request 
     request.open('GET','http://santhoshdasari786.imad.hasura-app.io/submit-name?name='+name ,true);
     request.send(null);
-};
+};*/
 
 var signin = document.getElementById('sbt_bttn');
 
