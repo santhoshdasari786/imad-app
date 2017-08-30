@@ -310,6 +310,11 @@ app.get('/checklogin', function (req, res) {
    }
 });
 
+app.get('/logout' , function(req,res){
+   delete req.session.auth;
+   res.send('logged out');
+});
+
 app.get('/signin', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'loginform.html'));
 });
