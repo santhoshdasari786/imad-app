@@ -48,6 +48,16 @@ body {
     padding-left: 50px;
     padding-right: 50px;
 }
+.articlesclass{
+     max-width: 800px;
+    margin: 0 auto;
+    color: green;
+    font-family: sans-serif;
+    padding-top: 60px;
+    padding-left: 20px;
+    padding-right: 20px;
+    background-color: rgb(61, 91, 155);
+}
 
 
 
