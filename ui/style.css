@@ -81,7 +81,8 @@ body {
 }
 
 .h33 {
-    display: inline;
+    display: inline-block;
+    vertical-align: super;
     /* position: relative; */
 }
 
