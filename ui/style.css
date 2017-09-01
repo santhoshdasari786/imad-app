@@ -74,10 +74,15 @@ body {
 }
 
 .articleprofile{
-     margin: 0 auto;
-    color: white;
+    
+    margin: 0 auto;
     font-family: sans-serif;
-    padding : 50px 50px 50px 50px;
+    padding: 5px 100px;
+}
+
+.h33 {
+    display: inline;
+    /* position: relative; */
 }
 
 
