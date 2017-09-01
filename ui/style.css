@@ -68,7 +68,14 @@ body {
 .articlesheaderrow{
     font-family: sans-serif;
     padding: 10px;
-     font-weight: bold;
+    font-weight: bold;
+}
+
+.articleprofile{
+     margin: 0 auto;
+    color: white;
+    font-family: sans-serif;
+    padding : 50px 50px 50px 50px;
 }
 
 
