@@ -21,6 +21,10 @@ body {
     height: 200px;
 }
 
+.img-small {
+    height: 75px;
+}
+
 .container {
     max-width: 800px;
     margin: 0 auto;
