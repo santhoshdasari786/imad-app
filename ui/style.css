@@ -50,7 +50,6 @@ body {
     padding-right: 50px;
 }
 .articlesclass{
-     max-width: 800px;
     margin: 0 auto;
     color: white;
     font-family: sans-serif;
@@ -64,7 +63,7 @@ body {
 
 .articlesheaderrow{
     font-family: sans-serif;
-    padding: 10px;
+    padding: 20px;
 }
 
 
