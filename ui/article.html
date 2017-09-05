@@ -57,7 +57,8 @@
                       for(i=0; i<names.length ; i++)
                       {
                           list+= '<dt style="font-weight: bold; margin-top: 5px; margin-bottom: 5px;">'+names[i].title+'<dt>';
-                          list+= '<dd style="margin-top: 3px; margin-bottom: 3px;">'+names[i].date+'<dd>';
+                          var d = new Date(names[i].date);
+                          list+= '<dd style="margin-top: 3px; margin-bottom: 3px;">'+d+'<dd>';
                            list+= '<dd style="margin-top: 3px; margin-bottom: 3px;">'+names[i].heading+'<dd>';
                       }
                       var ul = document.getElementById('header-articletitle');
