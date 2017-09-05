@@ -344,10 +344,10 @@ app.get('/blog', function (req, res) {
                        list+= '<dd>'+result.rows[i].date+'<dd>';
                        list+= '<dd>'+result.rows[i].heading+'<dd>';
                   }
-                  
+                  console.log('loaded!');
                     var title = document.getElementById('header-articletitle');
                   title.innerHTML = list;
-                   console.log('loaded!');
+                   
                   //res.sendFile(path.join(__dirname, 'ui', 'article.html'));
            }
        }
