@@ -326,12 +326,14 @@ app.get('/blog', function (req, res) {
             if(err)
        {
            res.status(500).send(err.toString());
+           console.log('error!');
        }
        else
        {
            if(result.rows.lemgth === 0)
            {
                res.status(404).send('ARTICLE NOT FOUND');
+                console.log('nodata!');
            }
            else
            {
@@ -345,6 +347,7 @@ app.get('/blog', function (req, res) {
                   
                     var title = document.getElementById('header-articletitle');
                   title.innerHTML = list;
+                   console.log('loaded!');
                   //res.sendFile(path.join(__dirname, 'ui', 'article.html'));
            }
        }
