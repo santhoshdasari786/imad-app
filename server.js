@@ -320,12 +320,6 @@ app.get('/signin', function (req, res) {
 });
 
 app.get('/blog', function (req, res) {
-     
-     
-    
-  //  var title = document.getElementById('header-articletitle');
-    
-    //title.innerHTML = 
     
   res.sendFile(path.join(__dirname, 'ui', 'article.html'));
 });
