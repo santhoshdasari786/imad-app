@@ -270,7 +270,7 @@ app.post('/login', function(req,res){
     var username = req.body.username;
     var password = req.body.password;
   
-   pool.query('SELECT * FROM "users" WHERE username = $1 ',[username], function(err, result)
+   pool.query('SELECT * FROM "articles" WHERE username = $1 ',[username], function(err, result)
    {
         if(err)
        {
@@ -320,6 +320,40 @@ app.get('/signin', function (req, res) {
 });
 
 app.get('/blog', function (req, res) {
+    
+      pool.query('SELECT 'title','date','heading' FROM "users"', function(err, result)
+      {
+            if(err)
+       {
+           res.status(500).send(err.toString());
+       }
+       else
+       {
+           if(result.rows.lemgth === 0)
+           {
+               res.status(404).send('ARTICLE NOT FOUND');
+           }
+           else
+           {
+                var list = [];
+              for(i=0; i<result.rows.length ; i++)
+                  {
+                      list+= '<dt>'+result.rows[i].title+'<dt>';
+                       list+= '<dd>'+result.rows[i].date+'<dd>';
+                       list+= '<dd>'+result.rows[i].heading+'<dd>';
+                  }
+                  
+                    var title = document.getElementById('header-articletitle');
+                  title.innerHTML = list;
+           }
+       }
+          
+      });
+    
+  //  var title = document.getElementById('header-articletitle');
+    
+    //title.innerHTML = 
+    
   res.sendFile(path.join(__dirname, 'ui', 'article.html'));
 });
 
