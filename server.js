@@ -321,7 +321,7 @@ app.get('/signin', function (req, res) {
 
 app.get('/blog', function (req, res) {
     
-      pool.query('SELECT title,date,heading FROM "users"', function(err, result)
+      pool.query('SELECT title,date,heading FROM "articles"', function(err, result)
       {
             if(err)
        {
