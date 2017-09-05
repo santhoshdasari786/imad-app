@@ -345,6 +345,7 @@ app.get('/blog', function (req, res) {
                   
                     var title = document.getElementById('header-articletitle');
                   title.innerHTML = list;
+                  res.sendFile(path.join(__dirname, 'ui', 'article.html'));
            }
        }
           
@@ -354,7 +355,7 @@ app.get('/blog', function (req, res) {
     
     //title.innerHTML = 
     
-  res.sendFile(path.join(__dirname, 'ui', 'article.html'));
+ // res.sendFile(path.join(__dirname, 'ui', 'article.html'));
 });
 
 /*app.get('/:articlewo', function (req, res) {
