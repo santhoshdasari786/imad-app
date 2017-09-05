@@ -347,7 +347,7 @@ app.get('/blog', function (req, res) {
                        list+= '<dd>'+result.rows[i].heading+'<dd>';
                   }
                 
-                    var title = window.document.getElementById('header-articletitle');
+                    var title = document.getElementById('header-articletitle');
                   title.innerHTML = list;
                    
                   //res.sendFile(path.join(__dirname, 'ui', 'article.html'));
