@@ -320,9 +320,10 @@ app.get('/signin', function (req, res) {
 });
 
 app.get('/blog', function (req, res) {
-    
+      console.log('loooo!');
       pool.query('SELECT title,date,heading FROM "articles"', function(err, result)
       {
+            console.log('kooo!');
             if(err)
        {
            res.status(500).send(err.toString());
@@ -337,6 +338,7 @@ app.get('/blog', function (req, res) {
            }
            else
            {
+                 console.log('loaded!');
                 var list = [];
               for(i=0; i<result.rows.length ; i++)
                   {
@@ -344,7 +346,7 @@ app.get('/blog', function (req, res) {
                        list+= '<dd>'+result.rows[i].date+'<dd>';
                        list+= '<dd>'+result.rows[i].heading+'<dd>';
                   }
-                  console.log('loaded!');
+                
                     var title = document.getElementById('header-articletitle');
                   title.innerHTML = list;
                    
