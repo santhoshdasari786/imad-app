@@ -56,9 +56,9 @@
                      var list = [];
                       for(i=0; i<names.length ; i++)
                       {
-                          list+= '<dt>'+names[i].title+'<dt>';
-                          list+= '<dd>'+names[i].date+'<dd>';
-                           list+= '<dd>'+names[i].heading+'<dd>';
+                          list+= '<dt style="font-weight: bold; margin-top: 5px; margin-bottom: 5px;">'+names[i].title+'<dt>';
+                          list+= '<dd style="margin-top: 3px; margin-bottom: 3px;">'+names[i].date+'<dd>';
+                           list+= '<dd style="margin-top: 3px; margin-bottom: 3px;">'+names[i].heading+'<dd>';
                       }
                       var ul = document.getElementById('header-articletitle');
                       ul.innerHTML = list;
