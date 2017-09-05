@@ -328,7 +328,7 @@ app.get('/blog', function (req, res) {
 app.get('/blogdata', function (req, res) {
      pool.query('SELECT title,date,heading FROM "articles"', function(err, result)
       {
-            console.log('kooo!');
+           
             if(err)
        {
            res.status(500).send(err.toString());
