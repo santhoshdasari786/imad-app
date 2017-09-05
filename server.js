@@ -350,7 +350,7 @@ app.get('/blogdata', function (req, res) {
            else
            {
                  console.log('loaded!');
-              
+              res.send(JSON.stringify(result.rows))
                    
                   //res.sendFile(path.join(__dirname, 'ui', 'article.html'));
            }
