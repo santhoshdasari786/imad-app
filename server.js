@@ -320,8 +320,19 @@ app.get('/signin', function (req, res) {
 });
 
 app.get('/blog', function (req, res) {
-      console.log('loooo!');
-      pool.query('SELECT title,date,heading FROM "articles"', function(err, result)
+     
+     
+    
+  //  var title = document.getElementById('header-articletitle');
+    
+    //title.innerHTML = 
+    
+  res.sendFile(path.join(__dirname, 'ui', 'article.html'));
+});
+
+
+app.get('/blogdata', function (req, res) {
+     pool.query('SELECT title,date,heading FROM "articles"', function(err, result)
       {
             console.log('kooo!');
             if(err)
@@ -339,16 +350,7 @@ app.get('/blog', function (req, res) {
            else
            {
                  console.log('loaded!');
-                var list = [];
-              for(i=0; i<result.rows.length ; i++)
-                  {
-                      list+= '<dt>'+result.rows[i].title+'<dt>';
-                       list+= '<dd>'+result.rows[i].date+'<dd>';
-                       list+= '<dd>'+result.rows[i].heading+'<dd>';
-                  }
-                
-                    var title = document.getElementById('header-articletitle');
-                  title.innerHTML = list;
+              
                    
                   //res.sendFile(path.join(__dirname, 'ui', 'article.html'));
            }
@@ -356,11 +358,6 @@ app.get('/blog', function (req, res) {
           
       });
     
-  //  var title = document.getElementById('header-articletitle');
-    
-    //title.innerHTML = 
-    
-  res.sendFile(path.join(__dirname, 'ui', 'article.html'));
 });
 
 /*app.get('/:articlewo', function (req, res) {
