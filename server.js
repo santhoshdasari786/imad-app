@@ -259,7 +259,7 @@ app.post('/create-user',function(req,res)
        }
        else
        { 
-              console.log('user is signedup' +result);
+              console.log('user is signedup' +JSON.stringify(result));
            res.send('USER SUCCESSFULLY CREATED '+username+': result is :- '+JSON.stringify(result));
            
        }
