@@ -117,6 +117,8 @@ signup.onclick = function()
     
     var request = new XMLHttpRequest();
     
+    request.addEventListener("load", reqListener);
+    
     request.onreadystatechange = function () {
         if(request.readyState === XMLHttpRequest.DONE)
         {
@@ -142,5 +144,9 @@ signup.onclick = function()
     request.send(JSON.stringify({username: username, password: password}));
     
 };
+
+function reqListener () {
+  console.log(this.responseText);
+}
 
 
