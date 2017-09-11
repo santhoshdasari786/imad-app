@@ -146,7 +146,8 @@ signup.onclick = function()
 };
 
 function reqListener () {
-  console.log(this.responseText);
+  console.log(this.responseText.username);
+  consile.log(JSON.stringify(this.responseText));
 }
 
 
