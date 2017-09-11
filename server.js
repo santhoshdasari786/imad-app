@@ -259,7 +259,7 @@ app.post('/create-user',function(req,res)
        }
        else
        { 
-           res.send('USER SUCCESSFULLY CREATED '+username);
+           res.send('USER SUCCESSFULLY CREATED '+username+': result is :- '+result);
            
        }
    });
